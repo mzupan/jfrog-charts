@@ -219,6 +219,9 @@ spec:
           successThreshold: {{ .Values.artifactory.livenessProbe.successThreshold }}
         {{- end }}
       volumes:
+      - name: binarystore-xml
+        configMap:
+          name: {{ template "artifactory.fullname" . }}-bs
       {{- if .Values.artifactory.distributionCerts }}
       - name: distribution-certs
         configMap:
