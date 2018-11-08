@@ -125,6 +125,21 @@ artifactory:
     # storageClass: "-"
     ## Annotations for the Persistent Volume Claim
     annotations: {}
+    
+    awsS3:
+      # Set a unique bucket name
+      bucketName: "artifactory-ha-aws"
+      endpoint:
+      region:
+      identity:
+      credential:
+      path: "artifactory-ha/filestore"
+      refreshCredentials: true
+      testConnection: false
+      ## Additional properties to set on the s3 provider
+      properties: {}
+      #  httpclient.max-connections: 100
+
   ## Uncomment the following resources definitions or pass them from command line
   ## to control the cpu and memory resources allocated by the Kubernetes cluster
   resources: {}
