@@ -125,6 +125,7 @@ artifactory:
     # storageClass: "-"
     ## Annotations for the Persistent Volume Claim
     annotations: {}
+    maxCacheSize: 50000000000
     
     awsS3:
       # Set a unique bucket name
